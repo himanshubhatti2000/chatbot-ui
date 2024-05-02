@@ -8,6 +8,7 @@ nav{
   align-items: center;
   box-sizing: border-box;
   padding: 10px;
+  z-index: 2;
 }
 
 .messages-container{
@@ -15,6 +16,7 @@ nav{
   bottom: 50px;
   overflow-y: auto;
   position: absolute;
+  z-index: 1;
   left: 0;
   right: 0;
   display: flex;
