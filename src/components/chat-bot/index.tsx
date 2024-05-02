@@ -35,12 +35,16 @@ const Chatbot: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // scroll messages to bottom
-  const scrollToBottom = useCallback(() => {
-    if (messagesEndRef.current) {
-      console.log("working scroll");
-      messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  }, []);
+  const scrollToBottom = useCallback(
+    () =>
+      setTimeout(() => {
+        if (messagesEndRef.current) {
+          console.log("working scroll");
+          messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 0),
+    []
+  );
 
   // adding new messages
   const addNewMessage = useCallback((message: Message) => {
