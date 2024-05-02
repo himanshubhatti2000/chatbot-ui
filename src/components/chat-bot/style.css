@@ -1,3 +1,8 @@
+.chatbot-container{
+ height: 100vh;
+ overflow: hidden;
+}
+
 nav{
   position: fixed;
   left: 0;
