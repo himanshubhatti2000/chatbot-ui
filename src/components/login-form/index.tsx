@@ -2,6 +2,7 @@ import "./style.css";
 import React, { useState } from "react";
 import Input from "../form/input";
 import { validateEmail, validatePassword } from "../../utils";
+import Button from "../form/button";
 
 interface LoginProps {
   login: (value: string) => void;
@@ -15,19 +16,22 @@ const Login: React.FC<LoginProps> = ({ login }) => {
 
   const handleLogin = () => {
     let isValid = true;
-
-    if (!validateEmail(email)) {
+    setPasswordError("");
+    setEmailError("");
+    if (!email) {
+      isValid = false;
+      setEmailError("Enter email.");
+    } else if (!validateEmail(email)) {
       setEmailError("Invalid email format.");
       isValid = false;
-    } else {
-      setEmailError("");
     }
 
-    if (!validatePassword(password)) {
+    if (!password) {
+      isValid = false;
+      setPasswordError("Enter password.");
+    } else if (!validatePassword(password)) {
       setPasswordError("Password must be at least 6 characters long.");
       isValid = false;
-    } else {
-      setPasswordError("");
     }
 
     if (isValid) {
@@ -61,7 +65,9 @@ const Login: React.FC<LoginProps> = ({ login }) => {
         />
         {passwordError && <div className="error">{passwordError}</div>}
       </div>
-      <button type="submit">Login</button>
+      <Button type="submit" variant="contained">
+        Login
+      </Button>
     </form>
   );
 };

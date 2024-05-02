@@ -1,0 +1,22 @@
+.styled-btn{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+.btn-contained{
+    background-color: var(--primary-color);
+}
+
+.btn-text{
+    color: var(--primary-color);
+}
+
+.btn-contained:hover{
+    background-color: var(--primary-color-light);
+}
+
+.btn-text:hover{
+    color: #f1f1f1;
+}

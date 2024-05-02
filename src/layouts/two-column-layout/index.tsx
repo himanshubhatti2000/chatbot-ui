@@ -2,8 +2,8 @@ import React from "react";
 import "./style.css";
 
 interface TwoColumnLayoutProps {
-  imageUrl: string; // URL of the image to display on the left side
-  children: React.ReactNode; // Content to display on the right side
+  imageUrl: string;
+  children: React.ReactNode;
 }
 
 const TwoColumnLayout: React.FC<TwoColumnLayoutProps> = ({
