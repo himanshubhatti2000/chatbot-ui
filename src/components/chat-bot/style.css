@@ -1,0 +1,81 @@
+nav{
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.messages-container{
+  top: 50px;
+  bottom: 50px;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+
+}
+
+.messages{
+  max-width: 1280px;
+  width: 100%;
+  padding: 10px;
+}
+
+.chatbot-container {
+    min-height: 100vh;
+   
+  }
+.chatbot{
+    width: 1280px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+.chatbot .logout{
+  background-color: unset;
+  font-size: 24px;
+  color: var(--primary-color);
+  border: none;
+
+}
+.chat-bubble-container{
+  display: flex;
+}
+
+.chat-bubble {
+  display: inline-block;
+  max-width: 75%;
+  padding: 8px 12px;
+  background-color: #fff;
+  border-radius: 18px;
+  margin: 4px 0; 
+  word-wrap: break-word;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  transition: all 0.3s ease;
+  }
+
+.chat-bubble-end{
+  justify-content: flex-end;
+}
+  
+.chat-bubble img{
+    width: 100%;
+    height: auto;
+  }
+
+.last-message-other{
+   border-top-left-radius: 5px;
+}
+
+.last-message-mine{
+  border-top-right-radius: 5px;
+}

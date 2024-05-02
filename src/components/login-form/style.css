@@ -1,0 +1,41 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap:28px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  }
+  
+.login-container .field-container{
+  position: relative;
+}
+
+.login-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+  }
+
+.login-container .error{
+    font-size: 12px;
+    color: rgb(255, 54, 36);
+    position: absolute;
+    bottom: -20px;
+
+  }
+  
+  button:hover {
+    background-color: var(--primary-color-light);
+  }
+  
+@media (max-width: 720px) {
+   .login-container {
+      box-shadow: unset;
+      border: unset;
+    }
+}
