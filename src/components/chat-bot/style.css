@@ -20,7 +20,7 @@ nav{
   top: 50px;
   bottom: 50px;
   overflow-y: auto;
-  position: absolute;
+  position: fixed;
   z-index: 1;
   left: 0;
   right: 0;
